@@ -28,7 +28,7 @@ let shopItemsData = [
     desc: "Milk carton party pack box",
     img: "../Images/box1.jpg",
   },
-  {
+  { 
     id: "box2",
     name: "Box 2",
     price: 45,

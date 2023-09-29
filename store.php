@@ -21,48 +21,53 @@ ini_set('display_errors', 1);
 </head>
 
 <body>
-  <div class="navbar">
-    <a class="logo">
-      <h2>Party Supplies Store</h2>
-    </a>
-    <button class="hamburger" id="hamburger">
-      <i class="bi bi-list"></i>
-    </button>
-    <ul class="nav-ul" id="nav-ul">
-      <li>
-        <a href="index.html">
-          <p>Welcome</p>
+<div class="navbar">
+        <a class="logo">
+            <h2>Party Supplies Store</h2>
         </a>
-      </li>
-      <li>
-        <a href="store.html">
-          <p>Home</p>
-        </a>
-      </li>
-      <li>
-        <a href="aboutUs.html">
-          <p>About Us</p>
-        </a>
-      </li>
-      <li>
-        <a href="gallery.html">
-          <p>Gallery</p>
-        </a>
-      </li>
-      <li>
-        <a href="contactUs.html">
-          <p>Contact Us</p>
-        </a>
-      </li>
-      <li>
-        <a href="cart.html">
-          <div class="cart">
-            <i class="bi bi-cart-fill"></i>
-            <div id="cartAmount" class="cartAmount">0</div>
-          </div>
-        </a>
-      </li>
-  </div>
+        <button class="hamburger" id="hamburger">
+            <i class="bi bi-list"></i>
+        </button>
+        <ul class="nav-ul" id="nav-ul">
+            <li>
+                <a href="index.html">
+                    <p>Welcome</p>
+                </a>
+            </li>
+            <li>
+                <a href="register.php">
+                    <p>Register</p>
+                </a>
+            </li>
+            <li>
+                <a href="store.html">
+                    <p>Home</p>
+                </a>
+            </li>
+            <li>
+                <a href="aboutUs.html">
+                    <p>About Us</p>
+                </a>
+            </li>
+            <li>
+                <a href="gallery.html">
+                    <p>Gallery</p>
+                </a>
+            </li>
+            <li>
+                <a href="contactUs.html">
+                    <p>Contact Us</p>
+                </a>
+            </li>
+            <li>
+                <a href="cart.html">
+                    <div class="cart">
+                        <i class="bi bi-cart-fill"></i>
+                        <div id="cartAmount" class="cartAmount">0</div>
+                    </div>
+                </a>
+            </li>
+    </div>
 
   <div class="welcome">
     <p class="welcome-text">

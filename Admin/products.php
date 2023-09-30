@@ -87,7 +87,7 @@
                             <h3>New Products</h3>
                         </div>
                         <div class="icon-case">
-                            <img src="./assets/images/teachers.png" alt="">
+                            <img width="40px" src="./assets/images/new.png" alt="">
                         </div>
                     </div>
                     <div class="card">
@@ -112,7 +112,7 @@
                             <h3>Old Products</h3>
                         </div>
                         <div class="icon-case">
-                            <img src="./assets/images/schools.png" alt="">
+                            <img width="40px" src="./assets/images/old.png" alt="">
                         </div>
                     </div>
                     <div class="card">

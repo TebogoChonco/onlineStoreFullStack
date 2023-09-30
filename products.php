@@ -65,7 +65,8 @@ if (isset($_POST["checkout"])) {
 </head>
 
 <body>
-    <div class="navbar">
+  
+<div class="navbar">
         <a class="logo">
             <h2>Tebogo Party Supplies</h2>
         </a>
@@ -73,30 +74,42 @@ if (isset($_POST["checkout"])) {
             <i class="bi bi-list"></i>
         </button>
         <ul class="nav-ul" id="nav-ul">
-            <li><a href="aboutUs.php">About</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="products.php">Products</a></li>
-            <li><a href="orders.php">My Orders</a></li>
-            <li><a href="contact.php">Contact</a></li>
-           <!-- <li>
+            <li><a href="aboutUs.php">About Us</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li>
                 <a href="cart.html">
-                     <div class="cart">
-                        <i class="bi bi-cart-fill"></i>
+                    <div class="cart">
+                        <i class="bi bi-cart-fill">Cart</i>
                         <div id="cartAmount" class="cartAmount">0</div>
-                    </div> 
+                    </div>
                 </a>
-            </li>-->
+            </li>
+            <li><a href="orders.php">My Orders</a></li>
             <?php
 
-            if (isset($_SESSION['user_username'])) {
-                echo '<li><a href="account.php">My Account</a></li>';
-                echo '<li><a href="logout.php">Log Out</a></li>';
-            } else {
-                echo '<li><a href="login.php">Log In</a></li>';
-                echo '<li><a href="register.php">Register</a></li>';
-            }
-            ?>
+      if (isset($_SESSION['user_username'])) {
+        echo '<li><a href="account.php">My Account</a></li>';
+        echo '<li><a href="logout.php">Log Out</a></li>';
+      } else {
+        echo '<li><a href="login.php">Log In</a></li>';
+        echo '<li><a href="register.php">Register</a></li>';
+      }
+      ?>
+
+        </ul>
+
+    </div>
+
+    <div class="welcome">
+        <p class="welcome-text">
+            Welcome to Tebogo's Party Supplies Online Store
+        </p>
         </ul>
     </div>
+
     <div class="container">
         <br />
         <br />
@@ -115,7 +128,7 @@ if (isset($_POST["checkout"])) {
                     <form method="post" action="products.php?action=add&id=<?php echo $row["productID"]; ?>">
                         <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px;" align="center">
                             <img src="./Images/<?php echo $row["image"]; ?>" class="img-responsive" /><br />
-                            <!-- <img src="./Images/" alt="" srcset=""> -->
+                         
                             <h4 class="text-info"><?php echo $row["productName"]; ?></h4>
 
                             <h4 class="text-danger">R <?php echo $row["price"]; ?></h4>

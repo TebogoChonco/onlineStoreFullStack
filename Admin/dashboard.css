@@ -60,7 +60,13 @@ td {
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
+
+.brand-name h3 {
+color: white;
+}
+
 .side-menu li {
     font-size: 24px;
     padding: 10px 40px;
@@ -72,6 +78,12 @@ td {
     background: white;
     color: #5094bf;
 }
+
+.side-menu img {
+width: 64px;
+color: red;
+}
+
 .container {
     position: absolute;
     right: 0;

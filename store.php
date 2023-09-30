@@ -3,25 +3,25 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-    session_start();
-    require_once 'database.php';
-     
+session_start();
+require_once 'database.php';
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Handmade by Tebogo</title>
-  <link rel="stylesheet" href="Style/style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store Full Stack</title>
+    <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 </head>
 
 <body>
-<div class="navbar">
+    <div class="navbar">
         <a class="logo">
             <h2>Party Supplies Store</h2>
         </a>
@@ -69,16 +69,16 @@ ini_set('display_errors', 1);
             </li>
     </div>
 
-  <div class="welcome">
-    <p class="welcome-text">
-      Welcome to Tebogo's Party Supplies Online Store
-    </p>
-    <ul></ul>
-  </div>
+    <div class="welcome">
+        <p class="welcome-text">
+            Welcome to Tebogo's Party Supplies Online Store
+        </p>
+        <ul></ul>
+    </div>
 
-  <div class="shop" id="shop">
+    <div class="shop" id="shop">
 
-  </div>
+    </div>
 
 </body>
 <script src="Script/data.js"></script>

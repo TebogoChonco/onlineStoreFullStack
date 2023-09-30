@@ -35,7 +35,7 @@ function total_items(){
 		$ip = getIp();
 		$get_items = "select * from cart where ip_add='$ip' ";
 		$run_items = mysqli_query($con, $get_items);
-		$count_items = mysqli_num_rows($run_itmes);
+		$count_items = mysqli_num_rows($run_items);
 	}
 	else{
 		global $con;

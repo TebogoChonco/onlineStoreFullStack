@@ -40,8 +40,8 @@ if (isset($_POST['register_btn'])) {
             $stmt->bind_param("sssss", $username, $fullname, $email, $phone, $password);
 
             if ($stmt->execute()) {
-                header("Location: login.php"); // Redirect to the login page
-                // echo "Redirecting...";
+                header("Location:login.php"); // Redirect to the login page
+                
             } else
                 echo "Error: Registration failed " . $stmt->error;
         }

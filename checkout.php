@@ -96,8 +96,7 @@ if (isset($_POST["submit_checkout"])) {
         <form method="post" action="">
             <label for="address">Address:</label>
             <textarea id="address" name="address" required></textarea><br><br>
-
-            <input type="submit" name="submit_checkout" value="Complete Checkout">
+            <a href="./thanks.php" type="submit" name="submit_checkout" value="Complete Checkout">Checkout</a>
         </form>
 
         <!-- Display order summary (invoice) after submission -->

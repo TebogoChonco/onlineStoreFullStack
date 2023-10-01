@@ -21,7 +21,7 @@ ini_set('display_errors', 1);
 
     <div class="navbar">
         <a class="logo">
-            <h2>Tebogo Party Supplies</h2>
+            <h3>Tebogo Party Supplies</h3>
         </a>
         <button class="hamburger" id="hamburger">
             <i class="bi bi-list"></i>
@@ -30,8 +30,8 @@ ini_set('display_errors', 1);
             <li><a href="index.php">Home</a></li>
             <li><a href="products.php">Products</a></li>
             <li><a href="aboutUs.php">About Us</a></li>
-            <li><a href="contactUs.html">Contact Us</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contactUs.php">Contact Us</a></li>
+            <li><a href="gallery.php">Gallery</a></li>
             <li>
                 <a href="cart.html">
                     <div class="cart">

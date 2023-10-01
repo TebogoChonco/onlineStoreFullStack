@@ -30,7 +30,7 @@ require_once './config/database.php';
             <li><a href="products.php">Products</a></li>
             <li><a href="aboutUs.php">About Us</a></li>
             <li><a href="contactUs.php">Contact Us</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="gallery.php">Gallery</a></li>
             <li>
                 <a href="cart.html">
                     <div class="cart">
@@ -62,7 +62,7 @@ require_once './config/database.php';
     </div>
     <div class="featured-products">
         <h2>Featured Products</h2>
-
+<br>
         <?php
               $query = "SELECT * FROM products WHERE isFeatured = 1 ORDER BY productID ASC LIMIT 4";
                 $result = mysqli_query($conn, $query);
@@ -82,7 +82,7 @@ require_once './config/database.php';
 
                     <h4 class="text-danger">R <?php echo $row["price"]; ?></h4>
 
-                    <input type="number" name="quantity" value="1" class="form-control" />
+                    <!-- <input type="number" name="quantity" value="1" class="form-control" /> -->
 
                     <input type="hidden" name="hidden_name" value="<?php echo $row["productName"]; ?>" />
 
@@ -93,40 +93,12 @@ require_once './config/database.php';
                 </div>
             </form>
 
-            
+
         </div>
         <?php
       }
     }
     ?>
     </div>
-    <script>
-    // JavaScript for incrementing and decrementing the product count
-    const productCountElements = document.querySelectorAll('.product-count');
-
-    productCountElements.forEach((countElement, index) => {
-        const decrementButton = countElement.querySelector('.decrement');
-        const incrementButton = countElement.querySelector('.increment');
-        const countNumber = countElement.querySelector('.product-count-number');
-
-        let count = 0;
-
-        decrementButton.addEventListener('click', () => {
-            if (count > 0) {
-                count--;
-                countNumber.textContent = count;
-            }
-        });
-
-        incrementButton.addEventListener('click', () => {
-            count++;
-            countNumber.textContent = count;
-        });
-    });
-    </script>
 </body>
-<!-- <script src="Script/data.js"></script> 
-<script src="Script/mainScript.js"></script>
-<script src="Script/navbar.js"></script>-->
-
 </html>

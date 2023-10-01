@@ -561,24 +561,40 @@ form button {
 }
 
 .featured-products-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
-  text-align: center;
-  /* Center-align the products within the container */
+  align-items: center;
 }
 
 .featured-products {
   display:flex;
-  /* Display products horizontally */
-  width: calc(30% - 20px);
-  /* Adjust the width based on your desired layout */
-  margin: 10px;
-  /* Add spacing between products */
-  border: 1px solid #ccc;
-  /* Add a border for better separation */
-  padding: 10px;
+  margin: 5px;
+  border: 5px solid #ccc;
+  padding: 5px;
   vertical-align: top;
-  /* Align products to the top within their container */
   justify-content: space-between ;
+}
+
+.galleryPage{
+  width: 100%; 
+  border:1px solid #333; 
+  background-color:#f1f1f1; 
+  border-radius:5px; 
+   padding:16px; 
+  text-align:center;
+}
+
+.galleryPage-container{
+  display: flex;
+  flex-direction: row;
+  max-width: 30%;
+  margin: 5px auto; 
+   padding: 10px;
+   background-color: #fff; 
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 /* responsiveness */

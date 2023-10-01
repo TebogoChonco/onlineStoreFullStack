@@ -26,7 +26,7 @@
             <li><a href="products.php">Products</a></li>
             <li><a href="aboutUs.php">About Us</a></li>
             <li><a href="contactUs.php">Contact Us</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="gallery.php">Gallery</a></li>
             <li>
                 <a href="cart.html">
                     <div class="cart">
@@ -38,14 +38,14 @@
             <li><a href="orders.php">My Orders</a></li>
             <?php
 
-  if (isset($_SESSION['user_username'])) {
-    echo '<li><a href="account.php">My Account</a></li>';
-    echo '<li><a href="logout.php">Log Out</a></li>';
-  } else {
-    echo '<li><a href="login.php">Log In</a></li>';
-    echo '<li><a href="register.php">Register</a></li>';
-  }
-  ?>
+      if (isset($_SESSION['user_username'])) {
+        echo '<li><a href="account.php">My Account</a></li>';
+        echo '<li><a href="logout.php">Log Out</a></li>';
+      } else {
+        echo '<li><a href="login.php">Log In</a></li>';
+        echo '<li><a href="register.php">Register</a></li>';
+      }
+      ?>
 
         </ul>
 

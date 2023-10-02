@@ -11,7 +11,7 @@ require_once '../config/database.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="products.css">
     <title>Dashboard</title>
 </head>
 
@@ -20,17 +20,21 @@ require_once '../config/database.php';
     <div class="container">
         <div class="header">
             <div class="nav">
-                <div class="search">
+                <!-- <div class="search">
                     <input type="text" placeholder="Search..">
                     <button type="submit"><img src="./assets/images/search.png" alt=""></button>
+                </div> -->
+                <div class="header" id="dashboard-header">
+                    <h2>Welcome to your Admin Dashboard</h2>
+                    <!-- <div class="img-case">
+                        <img src="./assets/images/profile.png" width="50px">
+                    </div> -->
                 </div>
                 <div class="user">
                     <!-- <a href="#" class="btn">Add New</a> -->
-                    <img src="./assets/images/notifications.png" alt="">
-                    <div class="img-case">
-                        <img src="./assets/images/user.png" alt="">
-                    </div>
-                    
+                    <!-- <img src="./assets/images/notifications.png" alt=""> -->
+
+
                 </div>
             </div>
         </div>
@@ -57,7 +61,7 @@ require_once '../config/database.php';
                         <h3>Total Products</h3>
                     </div>
                     <div class="icon-case">
-                        <img src="./assets/images/students.png" alt="">
+                        <img src="./assets/images/reading-book (1).png" alt="">
                     </div>
                 </div>
                 <div class="card">
@@ -81,7 +85,7 @@ require_once '../config/database.php';
                         <h3>Total Orders</h3>
                     </div>
                     <div class="icon-case">
-                        <img src="./assets/images/students.png" alt="">
+                        <img src="./assets/images/school.png" alt="">
                     </div>
                 </div>
                 <div class="card">
@@ -105,9 +109,9 @@ require_once '../config/database.php';
                         <h3>Total Users</h3>
                     </div>
                     <div class="icon-case">
-                        <img src="./assets/images/students.png" alt="">
+                        <img src="./assets/images/users.png" width="35px" alt="">
                     </div>
-                </div> 
+                </div>
                 <div class="card">
                     <div class="box">
                         <h1>
@@ -129,96 +133,10 @@ require_once '../config/database.php';
                         <h3>Total Brands</h3>
                     </div>
                     <div class="icon-case">
-                        <img src="./assets/images/students.png" alt="">
+                        <img src="./assets/images/teacher2.png" alt="">
                     </div>
                 </div>
             </div>
-            <!-- <div class="content-2">
-                <div class="recent-payments">
-                    <div class="title">
-                        <h2>Recent Payments</h2>
-                        <a href="#" class="btn">View All</a>
-                    </div>
-                    <table>
-                        <tr>
-                            <th>Name</th>
-                            <th>School</th>
-                            <th>Amount</th>
-                            <th>Option</th>
-                        </tr>
-                        <tr>
-                            <td>John Doe</td>
-                            <td>St. James College</td>
-                            <td>$120</td>
-                            <td><a href="#" class="btn">View</a></td>
-                        </tr>
-                        <tr>
-                            <td>John Doe</td>
-                            <td>St. James College</td>
-                            <td>$120</td>
-                            <td><a href="#" class="btn">View</a></td>
-                        </tr>
-                        <tr>
-                            <td>John Doe</td>
-                            <td>St. James College</td>
-                            <td>$120</td>
-                            <td><a href="#" class="btn">View</a></td>
-                        </tr>
-                        <tr>
-                            <td>John Doe</td>
-                            <td>St. James College</td>
-                            <td>$120</td>
-                            <td><a href="#" class="btn">View</a></td>
-                        </tr>
-                        <tr>
-                            <td>John Doe</td>
-                            <td>St. James College</td>
-                            <td>$120</td>
-                            <td><a href="#" class="btn">View</a></td>
-                        </tr>
-                        <tr>
-                            <td>John Doe</td>
-                            <td>St. James College</td>
-                            <td>$120</td>
-                            <td><a href="#" class="btn">View</a></td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="new-students">
-                    <div class="title">
-                        <h2>New Students</h2>
-                        <a href="#" class="btn">View All</a>
-                    </div>
-                    <table>
-                        <tr>
-                            <th>Profile</th>
-                            <th>Name</th>
-                            <th>option</th>
-                        </tr>
-                        <tr>
-                            <td><img src="./assets/images/user.png" alt=""></td>
-                            <td>John Steve Doe</td>
-                            <td><img src="./assets/images/info.png" alt=""></td>
-                        </tr>
-                        <tr>
-                            <td><img src="./assets/images/user.png" alt=""></td>
-                            <td>John Steve Doe</td>
-                            <td><img src="./assets/images/info.png" alt=""></td>
-                        </tr>
-                        <tr>
-                            <td><img src="./assets/images/user.png" alt=""></td>
-                            <td>John Steve Doe</td>
-                            <td><img src="./assets/images/info.png" alt=""></td>
-                        </tr>
-                        <tr>
-                            <td><img src="./assets/images/user.png" alt=""></td>
-                            <td>John Steve Doe</td>
-                            <td><img src="./assets/images/info.png" alt=""></td>
-                        </tr>
-
-                    </table>
-                </div>
-            </div> -->
         </div>
     </div>
 </body>

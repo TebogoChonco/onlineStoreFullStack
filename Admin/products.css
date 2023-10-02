@@ -194,6 +194,7 @@ td {
     height: 40px;
     width: 40px;
 }
+
 @media screen and (max-width: 1050px) {
     .side-menu li {
         font-size: 18px;

@@ -1,6 +1,6 @@
     <?php
     session_start();
-    require_once '../config/database.php';
+    require_once '../config/database.php'; 
     ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -19,7 +19,8 @@
         </div>
         <br>
         <div class="container">
-            <div class="header">
+        <div class="header">
+            <h2>Brands Dashboard</h2>
             </div>
             <div class="content">
                 <div class="cards">

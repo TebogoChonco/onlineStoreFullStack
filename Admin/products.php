@@ -10,16 +10,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="products.css">
-        <title>Dashboard</title>
+        <title>Products Dashboard</title>
     </head>
 
-    <body> 
+    <body>
         <div>
             <?php require_once './includes/navbar.php' ?>
         </div>
         <br>
         <div class="container">
             <div class="header">
+            <h2>Products Dashboard</h2>
             </div>
             <div class="content">
                 <div class="cards">
@@ -178,13 +179,13 @@
                             if ($result->num_rows > 0) {
                                 // Output data of each row
                                 while ($row = $result->fetch_assoc()) { ?>
-                                    <tr>
-                                        <td><?php echo $row["productName"] ?></td>
-                                        <td><?php echo $row["stockQuantity"] ?></td>
-                                        <td><?php echo "R" . $row["price"] ?></td>
+                            <tr>
+                                <td><?php echo $row["productName"] ?></td>
+                                <td><?php echo $row["stockQuantity"] ?></td>
+                                <td><?php echo "R" . $row["price"] ?></td>
 
-                                        <td><a href="#" class="btn">View</a></td>
-                                    </tr>
+                                <td><a href="#" class="btn">View</a></td>
+                            </tr>
                             <?php   }
                             } else {
                                 echo "No products found.";
@@ -194,7 +195,7 @@
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
     </body>
 
     </html>

@@ -24,7 +24,7 @@ if (isset($_POST['login_btn'])) {
             // Password is correct, create a session for the user
             $_SESSION['user_id'] = $row['id']; // Save user ID in session
             $_SESSION['user_username'] = $row['username'];
-            header("Location: index.php"); // Redirect to a protected page (e.g., dashboard)
+            header("Location: products.php"); // Redirect to a protected page (e.g., dashboard)
             exit();
         } else {
             // Password is incorrect

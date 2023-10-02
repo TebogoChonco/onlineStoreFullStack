@@ -32,14 +32,14 @@ require_once './config/database.php';
             <li><a href="contactUs.php">Contact Us</a></li>
             <li><a href="gallery.php">Gallery</a></li>
             <li>
-                <a href="cart.html">
+                <!-- <a href="cart.html">
                     <div class="cart">
                         <i class="bi bi-cart-fill">Cart</i>
                         <div id="cartAmount" class="cartAmount">0</div>
                     </div>
                 </a>
             </li>
-            <li><a href="orders.php">My Orders</a></li>
+            <li><a href="orders.php">My Orders</a></li> -->
             <?php
 
       if (isset($_SESSION['user_username'])) {

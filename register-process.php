@@ -33,22 +33,24 @@ if (isset($_POST['register_btn'])) {
             echo "Phone number is already registered. Please use a different phone number.";
         } else {
 
-
             // Prepare and execute the SQL query to insert user data into the 'users' table
             $sql = "INSERT INTO users (username, fullname, email, phone, password) VALUES (?, ?, ?, ?, ?)";
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("sssss", $username, $fullname, $email, $phone, $password);
-
+            echo "line 40";
             if ($stmt->execute()) {
                 header("Location:login.php"); // Redirect to the login page
-                
-            } else
+                exit();
+                echo "line 44";
+            } else {
                 echo "Error: Registration failed " . $stmt->error;
-        }
+        }}
     }
+   echo "line 49";
     // Close the database connection
     $email_check_stmt->close();
     $phone_check_stmt->close();
     $stmt->close();
     $conn->close();
+   echo "line 55";
 }

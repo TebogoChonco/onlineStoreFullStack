@@ -32,7 +32,7 @@
     </div>
 
     <div class="welcome">
-        <div class="py-5" id="register">
+        <div class="py-5" id="register"> 
 
             <h3>Login Form</h3>
 

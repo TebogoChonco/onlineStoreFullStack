@@ -73,7 +73,7 @@ td {
     color: #5094bf;
 }
 .container {
-    position: absolute;
+    position: absolute; 
     right: 0;
     width: 80vw;
     height: 100vh;
@@ -194,6 +194,9 @@ td {
     height: 40px;
     width: 40px;
 }
+
+  
+
 
 @media screen and (max-width: 1050px) {
     .side-menu li {

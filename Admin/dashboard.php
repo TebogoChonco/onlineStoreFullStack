@@ -20,10 +20,7 @@ require_once '../config/database.php';
     <div class="container">
         <div class="header">
             <div class="nav">
-                <!-- <div class="search">
-                    <input type="text" placeholder="Search..">
-                    <button type="submit"><img src="./assets/images/search.png" alt=""></button>
-                </div> -->
+
                 <div class="header" id="dashboard-header">
                     <h2>Welcome to your Admin Dashboard</h2>
                     <!-- <div class="img-case">
@@ -33,11 +30,19 @@ require_once '../config/database.php';
                 <div class="user">
                     <!-- <a href="#" class="btn">Add New</a> -->
                     <!-- <img src="./assets/images/notifications.png" alt=""> -->
-
-
                 </div>
             </div>
         </div>
+        <?php
+
+if (isset($_SESSION['user_username'])) {
+  echo '<li><a href="account.php">My Account</a></li>';
+  echo '<li><a href="logout.php">Log Out</a></li>';
+} else {
+  echo '<li><a href="login.php">Log In</a></li>';
+  echo '<li><a href="register.php">Register</a></li>';
+}
+?>
         <div class="content">
             <div class="cards">
                 <div class="card">

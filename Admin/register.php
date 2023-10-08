@@ -14,38 +14,14 @@
 </head>
 
 <body>
-<div class="navbar">
-    <a class="logo">
-      <h2>Tebogo Party Supplies</h2>
-    </a>
-    <button class="hamburger" id="hamburger">
-      <i class="bi bi-list"></i>
-    </button>
-    <ul class="nav-ul" id="nav-ul">
-      <!-- <li><a href="aboutUs.php">About</a></li>
-      <li><a href="products.php">Products</a></li>
-      <li><a href="orders.php">My Orders</a></li>
-      <li><a href="contact.php">Contact</a></li> 
-      <li>
-        <a href="cart.html">
-          <div class="cart">
-            <i class="bi bi-cart-fill"></i>
-            <div id="cartAmount" class="cartAmount">0</div>
-          </div>
+    <div class="navbar">
+        <a class="logo">
+            <h1>Tebogo Party Supplies Admin Dashboard</h1>
         </a>
-      </li> -->
-      <?php
+        <br>
+        <br>
 
-      if (isset($_SESSION['username'])) {
-        echo '<li><a href="account.php">My Account</a></li>';
-        echo '<li><a href="logout.php">Log Out</a></li>';
-      } else {
-        echo '<li><a href="index.php">Log In</a></li>';
-        echo '<li><a href="register.php">Register</a></li>';
-      }
-      ?>
-    </ul>
-  </div>
+    </div>
 
     <div class="welcome">
         <div class="py-5" id="register">

@@ -40,7 +40,7 @@ require_once './config/database.php';
                 </a>
             </li>
             <li><a href="orders.php">My Orders</a></li> -->
-            <?php
+                <?php
 
       if (isset($_SESSION['user_username'])) {
         echo '<li><a href="account.php">My Account</a></li>';
@@ -60,11 +60,11 @@ require_once './config/database.php';
             Welcome to Tebogo's Party Supplies Online Store
         </p>
     </div>
-    <div class="featured-products">
-        <h2>Featured Products</h2>
-<br>
+
+    <h2>Featured Products</h2><br>
+    <div class="featured-products-index">       
         <?php
-              $query = "SELECT * FROM products WHERE isFeatured = 1 ORDER BY productID ASC LIMIT 4";
+              $query = "SELECT * FROM products WHERE isFeatured = 1 ORDER BY productID ASC LIMIT 5";
                 $result = mysqli_query($conn, $query);
                 if (!$result) {
                die("Query failed: " . mysqli_error($conn));
@@ -72,8 +72,8 @@ require_once './config/database.php';
               if (mysqli_num_rows($result) > 0) {
            while ($row = mysqli_fetch_array($result)) {
          ?>
-        <div class="col-md-4">
 
+        <div class="products">
             <form method="post" action="products.php?action=add&id=<?php echo $row["productID"]; ?>">
                 <div class="display">
                     <img src="./Images/<?php echo $row["image"]; ?>" class="img-responsive" /><br />
@@ -82,23 +82,18 @@ require_once './config/database.php';
 
                     <h4 class="text-danger">R <?php echo $row["price"]; ?></h4>
 
-                    <!-- <input type="number" name="quantity" value="1" class="form-control" /> -->
-
                     <input type="hidden" name="hidden_name" value="<?php echo $row["productName"]; ?>" />
 
                     <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>" />
 
-                    <input type="submit" name="add_to_cart" />
-
+                    <button type="submit" name="add_to_cart">View more</button>
                 </div>
             </form>
-
-
         </div>
         <?php
-      }
-    }
-    ?>
+             } };
+        ?>
     </div>
 </body>
+
 </html>

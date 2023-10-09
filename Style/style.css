@@ -431,7 +431,7 @@ iframe {
 
 
 input.form-control{
-  width: 20%;
+  width: 40%;
 }
 
 .modal {
@@ -488,7 +488,7 @@ input.form-control{
 }
 
 .modal-body p {
-  font-size: 25px;
+  font-size: 5px;
 }
 
 #overlay {
@@ -540,6 +540,26 @@ form button {
   padding: 2px;
 }
 
+.products {
+  max-width: 200px;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.img-responsive{
+  width: 90%;
+}
+
+.btn{
+  font-size: 20px;
+  padding: 10;
+  margin: 10;
+
+}
+
 #main-wrapper {
   justify-content: center;
   display: block;
@@ -560,21 +580,37 @@ form button {
   padding: 2px;
 }
 
-.featured-products-container {
+.order-details{
+  width: 50%;
+}
+
+.order-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  align-items: center;
 }
 
 .featured-products {
+  width: 100%;
   display:flex;
-  margin: 5px;
-  border: 5px solid #ccc;
-  padding: 5px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0px;
+  border: 2px solid #ccc;
+  padding: 2px;
   vertical-align: top;
-  justify-content: space-between ;
+}
+
+.featured-products-index {
+  width: 100%;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0px;
+  border: 2px solid #ccc;
+  padding: 1px;
+  vertical-align: top;
 }
 
 .galleryPage{

@@ -51,13 +51,12 @@ if (isset($_POST["checkout"])) {
     // You can display the selected items and process the payment on this page
 }
 
-
 ?>
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>W</title>
+    <title>Online Store</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" href="Style/style.css" />
@@ -90,66 +89,66 @@ if (isset($_POST["checkout"])) {
             <li><a href="orders.php">My Orders</a></li>
             <?php
 
-      if (isset($_SESSION['user_username'])) {
-        echo '<li><a href="account.php">My Account</a></li>';
-        echo '<li><a href="logout.php">Log Out</a></li>';
-      } else {
-        echo '<li><a href="login.php">Log In</a></li>';
-        echo '<li><a href="register.php">Register</a></li>';
-      }
-      ?>
+             if (isset($_SESSION['user_username'])) {
+                 echo '<li><a href="account.php">My Account</a></li>';
+                 echo '<li><a href="logout.php">Log Out</a></li>';
+              } else {
+               echo '<li><a href="login.php">Log In</a></li>';
+               echo '<li><a href="register.php">Register</a></li>';
+              }
+             ?>
 
         </ul>
-
     </div>
 
     <div class="welcome">
         <p class="welcome-text">
             Welcome to Tebogo's Party Supplies Online Store
         </p>
-        </ul>
     </div>
+
     <div class="order-container">
+         <h2>Featured Products</h2>
         <div class="featured-products">
-            <h2>Featured Products</h2>
+         
+            <form method="post" action="checkout.php">
+                <?php
+                    $query = "SELECT * FROM products WHERE isFeatured = 1 ORDER BY productID ASC ";
+                   $result = mysqli_query($conn, $query);
+                    if (!$result) {
+                     die("Query failed: " . mysqli_error($conn));
+                       }
+                   if (mysqli_num_rows($result) > 0) {
+                     while ($row = mysqli_fetch_array($result)) {
+                ?>
 
-            <?php
-              $query = "SELECT * FROM products WHERE isFeatured = 1 ORDER BY productID ASC ";
-                $result = mysqli_query($conn, $query);
-                if (!$result) {
-               die("Query failed: " . mysqli_error($conn));
-                 }
-              if (mysqli_num_rows($result) > 0) {
-           while ($row = mysqli_fetch_array($result)) {
-         ?>
-            <div class="col-md-4">
+                <div>
+                    <form method="post">
+                        <div class="display">
+                            <img src="./Images/<?php echo $row["image"]; ?>" class="img-responsive" /><br />
 
-                <form method="post" action="products.php?action=add&id=<?php echo $row["productID"]; ?>">
-                    <div class="display">
-                        <img src="./Images/<?php echo $row["image"]; ?>" class="img-responsive" /><br />
+                            <h3 class="text-info"><?php echo $row["productName"]; ?></h3>
 
-                        <h3 class="text-info"><?php echo $row["productName"]; ?></h3>
+                            <h4 class="text-danger">R <?php echo $row["price"]; ?></h4>
 
-                        <h4 class="text-danger">R <?php echo $row["price"]; ?></h4>
+                            <input type="number" name="quantity" value="1" class="form-control" />
 
-                        <input type="number" name="quantity" value="1" class="form-control" />
+                            <input type="hidden" name="hidden_name" value="<?php echo $row["productName"]; ?>" />
 
-                        <input type="hidden" name="hidden_name" value="<?php echo $row["productName"]; ?>" />
+                            <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>" />
 
-                        <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>" />
-
-                        <input type="submit" name="add_to_cart" />
-
-                    </div>
-                </form>
-            </div>
+                            <button type="submit" name="add_to_cart">Add</button>
+                        </div>
+                    </form>
+                </div>
+       
+                <?php
+                    }
+                     }
+                ?>
         </div>
-        <?php
-            }
-        }
-        ?>
-        <div style="clear:both">
-            <br />
+        <div class="order-details" >
+
             <h2>Order Details</h2>
             <div class="table-responsive">
                 <table class="table table-bordered">
@@ -161,10 +160,10 @@ if (isset($_POST["checkout"])) {
                         <th width="5%">Action</th>
                     </tr>
                     <?php
-                if (!empty($_SESSION["shopping_cart"])) {
-                    $total = 0;
-                    foreach ($_SESSION["shopping_cart"] as $keys => $values) {
-                ?>
+                        if (!empty($_SESSION["shopping_cart"])) {
+                        $total = 0;
+                        foreach ($_SESSION["shopping_cart"] as $keys => $values) {
+                    ?>
                     <tr>
                         <td><?php echo $values["item_name"]; ?></td>
                         <td><?php echo $values["item_quantity"]; ?></td>
@@ -178,24 +177,23 @@ if (isset($_POST["checkout"])) {
                     }
                     ?>
                     <tr>
-                        <td colspan="3" align="right">Total</td>
-                        <td align="right">R <?php echo number_format($total, 2); ?></td>
+                        <td colspan="3">Total</td>
+                        <td>R <?php echo number_format($total, 2); ?></td>
                         <td></td>
                     </tr>
                     <?php
-                }
-                ?>
+                     }
+                    ?>
 
                 </table>
             </div>
             <form method="post" action="checkout.php">
-                <input type="submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Checkout"
-                    <?php echo (empty($_SESSION["shopping_cart"])) ? 'disabled' : ''; ?> />
+                <button type="submit" name="add_to_cart" class="btn" value="Checkout">
+                Add to cart </button>
             </form>
-        </div> 
+        </div>
     </div>
-    </div>
-    <br />
+
 </body>
 
 </html>

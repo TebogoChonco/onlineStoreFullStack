@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Handmade by Tebogo</title>
-    <link rel="stylesheet" href="Style.style.css">
+    <link rel="stylesheet" href="products.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 </head>
 
@@ -26,7 +26,7 @@
     <div class="welcome">
         <div class="py-5" id="register">
 
-            <h3>Registration Form</h3>
+            <h1>Registration Form</h1>
 
             <form action="register-process.php" method="POST">
 

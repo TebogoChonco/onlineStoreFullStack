@@ -43,7 +43,8 @@
                     <input type="password" placeholder="Enter Password" name="password" required>
                     <br>
                     <button class="login_button" name="login_btn" type="submit">Login</button>
-                    <a href="./register.php"><button type="button" class="back_btn">Register</button></a>
+                    <a href="./register.php"><button type="button" class="back_btn">Register</button></a><br><br>
+                    <a href="./Admin/login.php"><button type="button" class="login_btn">Login as Admin</button></a>
                 </div>
             </form>
         </div>

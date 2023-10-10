@@ -518,6 +518,10 @@ input.form-control{
   font-size: 40px;
 }
 
+.checkout-container p{
+  font-size: 45px;
+}
+
 form {
   max-width: 450px;
   margin: 20px auto;
@@ -529,7 +533,7 @@ form {
 
 form input {
   font-size: 20px;
-  margin-bottom: 7px;
+  /* margin-bottom: 7px; */
   padding: 4px;
 }
 
@@ -542,11 +546,11 @@ form button {
 
 .products {
   max-width: 200px;
-  margin: 10px auto;
-  padding: 10px;
+  /* margin: 10px auto; */
+  /* padding: 10px; */
   background-color: #fff;
   border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .img-responsive{

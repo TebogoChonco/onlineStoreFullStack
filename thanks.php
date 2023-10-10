@@ -18,34 +18,18 @@
         <a class="logo">
             <h3>Tebogo Party Supplies</h3>
         </a>
-        <button class="hamburger" id="hamburger">
-            <i class="bi bi-list"></i>
-        </button>
         <ul class="nav-ul" id="nav-ul">
             <li><a href="index.php">Home</a></li>
-            <li><a href="products.php">Products</a></li>
-            <li><a href="aboutUs.php">About Us</a></li>
-            <li><a href="contactUs.html">Contact Us</a></li>
             <li><a href="gallery.html">Gallery</a></li>
-            <li>
-                <a href="cart.html">
-                    <div class="cart">
-                        <i class="bi bi-cart-fill">Cart</i>
-                        <div id="cartAmount" class="cartAmount">0</div>
-                    </div>
-                </a>
-            </li>
-            <li><a href="orders.php">My Orders</a></li>
             <?php
-
-      if (isset($_SESSION['user_username'])) {
-        echo '<li><a href="account.php">My Account</a></li>';
-        echo '<li><a href="logout.php">Log Out</a></li>';
-      } else {
-        echo '<li><a href="login.php">Log In</a></li>';
-        echo '<li><a href="register.php">Register</a></li>';
-      }
-      ?>
+               if (isset($_SESSION['user_username'])) {
+                 echo '<li><a href="account.php">My Account</a></li>';
+                 echo '<li><a href="logout.php">Log Out</a></li>';
+                 } else {
+                  echo '<li><a href="login.php">Log In</a></li>';
+                  echo '<li><a href="register.php">Register</a></li>';
+                 }
+            ?>
 
         </ul>
 
@@ -58,10 +42,7 @@
       </p>
   </div>
     
-    <ul></ul>
   </div>
-
- 
 
 </body>
 <script src="Script/data.js"></script>

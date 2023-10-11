@@ -57,7 +57,7 @@
                                         <td><?php echo "R" . $row["price"] ?></td> 
                                         <td><?php echo $row["category"] ?></td>
                                         <td><?php echo $row["brandName"] ?></td>
-                                        <td><img src="../Images/" class="product-image" data-src="<?php $row["image"]; ?>" width="50" height="50"></td>
+                                        <td><img src="./Images/" class="product-image" data-src="<?php $row["image"]; ?>" width="50" height="50"></td>
                                         <td><a href="#" onclick="showImage('<?php echo $row['image']; ?>')"></a></td>
                                         <td><a href="#" class="btn">View</a></td>
                                     </tr>

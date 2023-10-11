@@ -1,5 +1,8 @@
 <?php
 
+session_start();
+require_once './config/database.php';
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -33,27 +36,16 @@ ini_set('display_errors', 1);
             <li><a href="contactUs.php">Contact Us</a></li>
             <li><a href="gallery.php">Gallery</a></li>
             <li>
-                <a href="cart.html">
-                    <div class="cart">
-                        <i class="bi bi-cart-fill">Cart</i>
-                        <div id="cartAmount" class="cartAmount">0</div>
-                    </div>
-                </a>
-            </li>
-            <li><a href="orders.php">My Orders</a></li>
-            <?php
-
-      if (isset($_SESSION['user_username'])) {
-        echo '<li><a href="account.php">My Account</a></li>';
-        echo '<li><a href="logout.php">Log Out</a></li>';
-      } else {
-        echo '<li><a href="login.php">Log In</a></li>';
-        echo '<li><a href="register.php">Register</a></li>';
-      }
-      ?>
-
+                <?php
+               if (isset($_SESSION['user_username'])) {
+                 echo '<li><a href="account.php">My Account</a></li>';
+                 echo '<li><a href="logout.php">Log Out</a></li>';
+                 } else {
+                  echo '<li><a href="login.php">Log In</a></li>';
+                  echo '<li><a href="register.php">Register</a></li>';
+                 }
+            ?>
         </ul>
-
     </div>
 
     <div class="welcome">

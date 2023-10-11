@@ -16,7 +16,7 @@ require_once '../config/database.php';
 
 <body>
     <div>
-    <?php require_once './includes/navbar.php' ?>
+        <?php require_once './includes/navbar.php' ?>
     </div>
     <br>
     <div class="container">
@@ -55,8 +55,8 @@ require_once '../config/database.php';
                 <div class="user-list">
                     <div class="title">
                         <h2>All Users</h2>
-                        <li><a href="viewUsers.php"><button class="btn" id="viewBtn">View All</button></a></li>
-                        <li><a href="addUser.php"><button class="btn" id="addBtn">Add User</button></a></li>
+                        <!-- <li><a href="viewUsers.php"><button class="btn" id="viewBtn">View All</button></a></li> -->
+                        <li><a href="register.php"><button class="btn" id="addBtn">Add User</button></a></li>
                     </div>
                     <table>
                         <tr>
@@ -73,13 +73,13 @@ require_once '../config/database.php';
 
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) { ?>
-                                <tr>
-                                    <td><?php echo $row["username"] ?></td>
-                                    <td><?php echo $row["email"] ?></td>
-                                    <td><?php echo $row["role"] ?></td>
-                                    <td><a href="#" class="btn">View</a></td>
-                                </tr>
-                            <?php }
+                        <tr>
+                            <td><?php echo $row["username"] ?></td>
+                            <td><?php echo $row["email"] ?></td>
+                            <td><?php echo $row["role"] ?></td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <?php }
                         } else {
                             echo "No users found.";
                         }
@@ -92,4 +92,3 @@ require_once '../config/database.php';
 </body>
 
 </html>
-

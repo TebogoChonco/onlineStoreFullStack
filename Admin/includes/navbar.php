@@ -17,5 +17,16 @@
     <li><a href="payments.php"><img src="./assets/images/payment.png" alt="">&nbsp;<span>Payments</span></a></li>
     <li><a href="users.php"><img src="./assets/images/users.png" width="35px"  alt="">&nbsp; <span>Users</span></a></li>
     <li><a href="settings.php"><img src="./assets/images/settings.png" alt="">&nbsp;<span>Settings</span></a></li>
+    <li>
+                <?php
+               if (isset($_SESSION['user_username'])) {
+                 echo '<li><a href="account.php">My Account</a></li>';
+                 echo '<li><a href="logout.php">Log Out</a></li>';
+                 } else {
+                  echo '<li><a href="login.php">Log In</a></li>';
+                  echo '<li><a href="register.php">Register</a></li>';
+                 }
+            ?>
+        
   </ul>
-  </div> 
+  </div>  

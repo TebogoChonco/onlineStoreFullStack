@@ -21,7 +21,7 @@ require_once '../config/database.php';
     <br>
     <div class="container">
         <div class="header">
-        <h2>Products Dashboard</h2>
+        <h2>Payments Dashboard</h2>
         </div>
         <div class="content">
             <div class="payment-list">

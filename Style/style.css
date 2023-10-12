@@ -414,6 +414,13 @@ iframe {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.container {
+  max-width: 50%;
+  font-size: 20px;
+  justify-content: center;
+  padding: 2px;
+}
+
 .btn {
   font-size: 30px;
   padding: 8px;

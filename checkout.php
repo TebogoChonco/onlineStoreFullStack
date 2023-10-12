@@ -71,11 +71,48 @@ if (isset($_POST["submit_checkout"])) {
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Checkout</title>
-    <!-- Add your CSS and JavaScript includes here, if needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Style/style.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
+
 <body>
+    <div class="navbar">
+        <a class="logo">
+            <h3>Tebogo Party Supplies</h3>
+        </a>
+        <button class="hamburger" id="hamburger">
+            <i class="bi bi-list"></i>
+        </button>
+        <ul class="nav-ul" id="nav-ul">
+            <li><a href="index.php">Home</a></li>
+            <li><a href="products.php">Products</a></li>
+            <li><a href="aboutUs.php">About Us</a></li>
+            <li><a href="contactUs.php">Contact Us</a></li>
+            <li><a href="gallery.php">Gallery</a></li>
+            <li>
+                <?php
+               if (isset($_SESSION['user_username'])) {
+                 echo '<li><a href="account.php">My Account</a></li>';
+                 echo '<li><a href="logout.php">Log Out</a></li>';
+                 } else {
+                  echo '<li><a href="login.php">Log In</a></li>';
+                  echo '<li><a href="register.php">Register</a></li>';
+                 }
+            ?>
+        </ul>
+    </div>
+
+    <div class="welcome">
+        <p class="welcome-text">
+            Welcome to Tebogo's Party Supplies Online Store
+        </p>
+    </div>
+
     <div class="container">
         <h1>Checkout</h1>
 
@@ -86,35 +123,46 @@ if (isset($_POST["submit_checkout"])) {
         <!-- Display products bought before billing -->
         <h3>Products Bought:</h3>
         <ul>
-            <?php foreach ($_SESSION["shopping_cart"] as $item) { ?>
-                <li><?php echo $item["item_name"]; ?> - Quantity: <?php echo $item["item_quantity"]; ?> - Price: R <?php echo $item["item_price"]; ?></li>
+            <?php
+                $total = 0; // Initialize the total price variable
+                foreach ($_SESSION["shopping_cart"] as $item) {
+               $total += $item["item_quantity"] * $item["item_price"];
+            ?>
+            <li><?php echo $item["item_name"]; ?> - Quantity: <?php echo $item["item_quantity"]; ?> - Price: R
+                <?php echo $item["item_price"]; ?></li>
             <?php } ?>
+
         </ul>
 
         <!-- Billing details form (collects address) -->
+        <hr>
         <h3>Billing Details:</h3>
         <form method="post" action="">
             <label for="address">Address:</label>
             <textarea id="address" name="address" required></textarea><br><br>
-            <a href="./thanks.php" type="submit" name="submit_checkout" value="Complete Checkout">Checkout</a>
+            <button type="submit" name="submit_checkout" value="Complete Checkout">Checkout</button>
         </form>
 
         <!-- Display order summary (invoice) after submission -->
         <?php if (isset($_POST["submit_checkout"])) { ?>
-            <h3>Order Summary (Invoice)</h3>
-            <p>Order Number: <?php echo $order_number; ?></p>
-            <p>Billing Details:</p>
-            <p>Name: <?php echo $user_fullname; ?></p>
-            <p>Email: <?php echo $user_email; ?></p>
-            <p>Address: <?php echo $_POST["address"]; ?></p>
-            <p>Products:</p>
-            <ul>
-                <?php foreach ($_SESSION["shopping_cart"] as $item) { ?>
-                    <li><?php echo $item["item_name"]; ?> - Quantity: <?php echo $item["item_quantity"]; ?> - Total Price: R <?php echo number_format($item["item_quantity"] * $item["item_price"], 2); ?></li>
-                <?php } ?>
-            </ul>
-            <p>Total Price: R <?php echo number_format($total_price, 2); ?></p>
+        <h3>Order Summary (Invoice)</h3>
+        <p>Order Number: <?php echo $order_number; ?></p>
+        <p>Billing Details:</p>
+        <p>Name: <?php echo $user_fullname; ?></p>
+        <p>Email: <?php echo $user_email; ?></p>
+        <p>Address: <?php echo $_POST["address"]; ?></p>
+        <p>Products:</p>
+        <li><?php echo $item["item_name"]; ?> - Quantity: <?php echo $item["item_quantity"]; ?> - Price: R
+                <?php echo $item["item_price"]; ?></li>
+        <ul>
+            <?php foreach ($_SESSION["shopping_cart"] as $item) { ?>
+            <li><?php echo $item["item_name"]; ?> - Quantity: <?php echo $item["item_quantity"]; ?> - Total Price: R
+                <?php echo number_format($item["item_quantity"] * $item["item_price"], 2); ?></li>
+            <?php } ?>
+        </ul>
+        <p>Total Price: R <?php echo number_format($total_price, 2); ?></p>
         <?php } ?>
     </div>
 </body>
+
 </html>

@@ -78,7 +78,7 @@
 <script>
     function showImage(imagePath) {
         // Display the image in a new window or modal
-        window.open('Images/' + imagePath, '_blank');
+        window.open('../Images/' + imagePath, '_blank');
     }
 </script>
 

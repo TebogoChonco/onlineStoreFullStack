@@ -163,7 +163,7 @@ if (isset($_POST["checkout"])) {
                 </tr>
                 <?php
                         $total = $total + ($values["item_quantity"] * $values["item_price"]);
-                    }
+                    } 
                     ?>
                 <tr>
                     <td colspan="3">Total</td>
